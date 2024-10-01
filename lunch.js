@@ -13,8 +13,25 @@
  * in minutes.
  */
 
+/*
+ 1. If we're not hungry, we want to tell ourselves to get back to work.
+ 2.  we want to pick something up and eat it in the lab when we've got less than 20 minutes
+ 3. try a place nearby if we've got between 20 and 30 minutes
+ 4. If we have any more time than that, we want to remind ourselves that we're in a bootcamp and that we should reconsider how much time we actually have to spare.
+
+ 4 conditions, need if statements
+ */ 
+
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  if (!hungry) {
+    console.log("Get back to work!")
+  } else if (availableTime < 20) {
+    console.log("I should pick something up to eat!")
+  } else if (availableTime < 30) {
+    console.log("I should try a place nearby")
+  } else {
+    console.log("Maybe I should spend this time on work instead!");
+  }
 }
 
 
